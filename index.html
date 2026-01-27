@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombre del Matemático | Portafolio Académico</title>
+    <meta name="description" content="Página personal y académica de [Nombre], Matemático especializado en [Especialidad].">
+    
+    <style>
+        /* --- Variables y Configuración General --- */
+        :root {
+            --primary-color: #2c3e50; /* Azul oscuro académico */
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+            --white: #ffffff;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            --font-serif: 'Georgia', serif; /* Para publicaciones */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        /* --- Estructura / Layout --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            padding: 40px 0;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 30px;
+        }
+
+        /* --- Header / Hero --- */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            font-weight: 300;
+        }
+
+        /* --- Navegación --- */
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: var(--white);
+            margin: 0 15px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* --- Títulos de Sección --- */
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        /* --- Listas (Publicaciones/Conferencias) --- */
+        ul.academic-list {
+            list-style: none;
+        }
+
+        ul.academic-list li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .paper-title {
+            font-weight: bold;
+            font-size: 1.05rem;
+            display: block;
+        }
+
+        .paper-details {
+            font-family: var(--font-serif);
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* --- Botón CV --- */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-color);
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* --- Media Queries (Móvil) --- */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            nav a { display: block; margin: 10px 0; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Dr. Nombre Apellido</h1>
+            <p>Matemático | Investigador en Topología Algebraica</p>
+            <nav>
+                <a href="#about">Sobre mí</a>
+                <a href="#publications">Publicaciones</a>
+                <a href="#conferences">Conferencias</a>
+                <a href="#contact">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>Sobre mí</h2>
+            <p>
+                Soy investigador postdoctoral en la Universidad de [Nombre]. Mis intereses de investigación se centran en 
+                <strong>[Área de interés 1]</strong> y <strong>[Área de interés 2]</strong>. 
+                Obtuve mi doctorado en la Universidad de [Universidad] bajo la supervisión del Prof. [Nombre].
+            </p>
+            <br>
+            <p>
+                Actualmente trabajo en problemas relacionados con la teoría de nudos y variedades de baja dimensión.
+            </p>
+            <a href="#" class="btn" download>Descargar CV (PDF)</a>
+        </section>
+
+        <section id="publications">
+            <h2>Publicaciones Seleccionadas</h2>
+            <ul class="academic-list">
+                <li>
+                    <span class="paper-title">On the Homology of Free Loop Spaces</span>
+                    <span class="paper-details">Con J. Doe y A. Smith. <em>Journal of Mathematics</em>, 45(2), 123-145, 2024.</span>
+                    <br>
+                    <a href="#">[arXiv]</a> <a href="#">[PDF]</a>
+                </li>
+                <li>
+                    <span class="paper-title">A New Invariant for 3-Manifolds</span>
+                    <span class="paper-details"><em>Transactions of the AMS</em>, en prensa.</span>
+                    <br>
+                    <a href="#">[arXiv]</a>
+                </li>
+                <li>
+                    <span class="paper-title">Finite Groups and Their Representations</span>
+                    <span class="paper-details">Proceedings of the International Congress, 2023.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="conferences">
+            <h2>Conferencias y Charlas</h2>
+            <ul class="academic-list">
+                <li>
+                    <span class="paper-title">Topología Geométrica en el Siglo XXI</span>
+                    <span class="paper-details">Madrid, España - Julio 2025. (Ponente invitado)</span>
+                </li>
+                <li>
+                    <span class="paper-title">Workshop de Álgebra Homológica</span>
+                    <span class="paper-details">Buenos Aires, Argentina - Marzo 2025.</span>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Puedes contactarme a través de correo electrónico o visitarme en mi oficina.</p>
+            <br>
+            <ul style="list-style: none;">
+                <li><strong>Email:</strong> nombre.apellido@universidad.edu</li>
+                <li><strong>Oficina:</strong> Edificio de Ciencias, Sala 304</li>
+                <li><strong>GitHub:</strong> <a href="#">github.com/usuario</a></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Nombre Apellido. Creado con HTML5 & CSS3.</p>
+    </footer>
+
+</body>
+</html>
