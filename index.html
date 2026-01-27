@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alejo García-Sassi | Portafolio Académico</title>
+    <title>Alejo García-Sassi | Academic Profile</title>
     <style>
         :root {
-            --primary-color: #1a1423; /* Violeta muy oscuro azulado */
-            --accent-color: #4b0082;  /* Indigo / Violeta para detalles */
+            --primary-color: #1a1423; /* Deep bluish-violet */
+            --accent-color: #4b0082;  /* Indigo accent */
             --bg-color: #f8f9fa;
-            --text-color: #333;
+            --text-color: #222;
+            --light-text: #666;
             --white: #ffffff;
         }
 
@@ -23,63 +24,74 @@
 
         .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
 
-        /* Header / Hero */
+        /* Header */
         header {
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 60px 0;
+            padding: 70px 0;
             text-align: center;
         }
 
         .profile-img {
-            width: 170px;
-            height: 170px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid rgba(255,255,255,0.2);
-            margin-bottom: 20px;
+            border: 3px solid rgba(255,255,255,0.1);
+            margin-bottom: 25px;
         }
 
-        h1 { margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
-        .subtitle { font-size: 1.1rem; color: #a19db1; font-weight: 300; margin-top: 5px; }
+        h1 { margin: 0; font-size: 2.8rem; letter-spacing: -1px; }
+        .subtitle { font-size: 1.2rem; color: #a19db1; font-weight: 300; margin-top: 8px; }
 
-        nav { margin-top: 30px; }
-        nav a { color: #a19db1; margin: 0 15px; text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
+        nav { margin-top: 35px; }
+        nav a { color: #a19db1; margin: 0 15px; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.2px; transition: 0.3s; }
         nav a:hover { color: var(--white); }
 
+        /* Sections */
         section {
             background: var(--white);
-            padding: 40px;
-            margin: 30px 0;
+            padding: 45px;
+            margin: 35px 0;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
         }
 
-        h2 { color: var(--primary-color); font-size: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
-        h3 { font-size: 1.1rem; margin-top: 25px; color: var(--accent-color); }
+        h2 { color: var(--primary-color); font-size: 1.6rem; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 25px; }
+        h3 { font-size: 1.15rem; margin-top: 30px; color: var(--accent-color); border-left: 3px solid var(--accent-color); padding-left: 10px; }
 
-        /* Lista de publicaciones */
-        .item { margin-bottom: 20px; }
-        .item-title { font-weight: 600; display: block; color: #111; }
-        .item-details { font-size: 0.95rem; color: #666; display: block; }
-        .tag { font-size: 0.75rem; background: #eee; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; color: #555; margin-right: 5px; }
+        /* Items */
+        .item { margin-bottom: 25px; }
+        .item-title { font-weight: 600; display: block; color: #111; font-size: 1.05rem; }
+        .item-details { font-size: 0.95rem; color: var(--light-text); display: block; line-height: 1.5; }
+        .tag { font-size: 0.7rem; background: #f0f0f5; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; color: var(--accent-color); font-weight: bold; margin-right: 8px; }
 
         .btn {
             display: inline-block;
             background: var(--primary-color);
             color: white;
-            padding: 12px 24px;
+            padding: 12px 28px;
             border-radius: 6px;
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: 0.3s;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+            margin-top: 10px;
         }
-        .btn:hover { background: var(--accent-color); transform: translateY(-2px); }
+        .btn:hover { background: var(--accent-color); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(75, 0, 130, 0.2); }
+        .btn-secondary { background: #444; }
 
-        .contact-list { list-style: none; padding: 0; }
-        .contact-list li { margin-bottom: 10px; }
+        footer { text-align: center; padding: 50px 0; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; }
 
-        footer { text-align: center; padding: 40px 0; color: #888; font-size: 0.85rem; }
+        /* List styling */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            section { padding: 25px; }
+            nav a { display: inline-block; margin: 5px 10px; }
+        }
     </style>
 </head>
 <body>
@@ -88,12 +100,13 @@
     <div class="container">
         <img src="alejo.jpeg" alt="Alejo García-Sassi" class="profile-img">
         <h1>Alejo García-Sassi</h1>
-        <p class="subtitle">Sistemas Dinámicos • Geometría y Topología • Teoría Ergódica</p>
+        <p class="subtitle">Dynamical Systems • Low-dimensional Geometry & Topology • Ergodic Theory</p>
         <nav>
-            <a href="#about">Perfil</a>
-            <a href="#research">Investigación</a>
-            <a href="#talks">Conferencias</a>
-            <a href="#outreach">Divulgación</a>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#teaching">Teaching</a>
+            <a href="#outreach">Outreach</a>
+            <a href="#contact">Contact</a>
         </nav>
     </div>
 </header>
@@ -101,89 +114,95 @@
 <div class="container">
 
     <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Investigador especializado en sistemas dinámicos y topología de baja dimensión, con interés en aplicaciones como la astrodinámica y la mecánica de fluidos.</p>
-        <p>Actualmente me desempeño como <strong>Investigador Postdoctoral (FAPESP)</strong> en el IME-USP (Brasil) y soy <strong>Profesor Adjunto</strong> en el IMERL, Universidad de la República (Uruguay).</p>
+        <h2>Summary</h2>
+        <p>I am a mathematician with a broad interest in <strong>Dynamical Systems</strong>, <strong>Geometry</strong>, and <strong>Topology</strong>, as well as their applications to fields such as Astrodynamics and Fluid Mechanics.</p>
         
-        <h3>Formación Académica</h3>
+        <p>Currently, I am a <strong>Postdoctoral Researcher (FAPESP)</strong> at the Institute of Mathematics and Statistics, University of São Paulo (IME-USP), and I hold a permanent position as <strong>Junior Professor</strong> at the Instituto de Matemática y Estadística Rafael Laguardia (IMERL), Universidad de la República (UdelaR), Uruguay.</p>
+        
+        <h3>Education</h3>
         <ul>
-            <li><strong>Doctorado en Matemáticas:</strong> Tesis conjunta entre USP y UdelaR (2020-2024).</li>
-            <li><strong>Maestría en Matemáticas:</strong> UdelaR (2018-2020).</li>
-            <li><strong>Licenciatura en Matemáticas:</strong> UdelaR (2011-2017).</li>
+            <li><strong>Joint PhD in Mathematics:</strong> USP (Brazil) and UdelaR (Uruguay), 2024.</li>
+            <li><strong>M.Sc. in Mathematics:</strong> Universidad de la República, Uruguay, 2020.</li>
+            <li><strong>B.Sc. in Mathematics:</strong> Universidad de la República, Uruguay, 2017.</li>
         </ul>
 
         <div style="margin-top: 30px;">
-            <a href="CV_Actualizado.pdf" class="btn" target="_blank">Ver CV Completo (PDF)</a>
+            <a href="Cv_Actualizado.pdf" class="btn" target="_blank">Download Full CV (PDF)</a>
+            <a href="tesis.pdf" class="btn btn-secondary" target="_blank">PhD Thesis</a>
         </div>
     </section>
 
     <section id="research">
-        <h2>Investigación</h2>
+        <h2>Research</h2>
         
-        <h3>Artículos Destacados</h3>
+        <h3>Publications & Preprints</h3>
         <div class="item">
-            <span class="tag">En revisión</span>
+            <span class="tag">Preprint</span>
             <span class="item-title">Fully chaotic conservative models for some torus homeomorphisms</span>
-            <span class="item-details">Con Fábio Armando Tal. Sometido a <em>Memoirs of the AMS</em>.</span>
+            <span class="item-details">With Fábio Armando Tal. arXiv: 2404.02341. Under consideration by <em>Memoirs of the AMS</em>.</span>
         </div>
         <div class="item">
-            <span class="tag">En revisión</span>
+            <span class="tag">Preprint</span>
             <span class="item-title">Geodesic tracking and the shape of ergodic rotation sets</span>
-            <span class="item-details">Con Pablo Lessa y Pierre-Antoine Guihéneuf. Sometido a <em>ASENS</em>.</span>
+            <span class="item-details">With Pablo Lessa and Pierre-Antoine Guihéneuf. Under consideration by <em>ASENS</em>.</span>
         </div>
         <div class="item">
-            <span class="tag">Publicado</span>
+            <span class="tag">Published</span>
             <span class="item-title">Fixed points for branched covering maps of the plane</span>
             <span class="item-details"><em>Fundamenta Mathematicae</em>, 254:213–236, 2021.</span>
         </div>
 
-        <h3>Proyectos en Curso</h3>
+        <h3>Selected Invited Talks</h3>
         <ul>
-            <li>Cotas uniformes explícitas para islas elípticas.</li>
-            <li>Modelos totalmente caóticos para superficies de género mayor.</li>
-            <li>Medidas de máxima entropía para homeomorfismos totalmente rotacionales.</li>
+            <li><strong>International Conference on Advanced Topics in Dynamical Systems</strong>, Nanjing, China (2025).</li>
+            <li><strong>Joint Meeting RSME-UMA-SMM-SDM</strong>, Mini-course: <em>Introduction to surface dynamics</em>, Brazil (2024).</li>
+            <li><strong>Coloquio de Matemática de la Región Centro</strong>, Invited Talk, Argentina (2024).</li>
+        </ul>
+
+        <h3>Ongoing Projects</h3>
+        <ul>
+            <li>Explicit uniform bounds for elliptic islands.</li>
+            <li>Fully chaotic models for higher genus surfaces.</li>
+            <li>Maximal entropy measures for C∞ fully rotational homeomorphisms.</li>
         </ul>
     </section>
 
-    <section id="talks">
-        <h2>Charlas y Conferencias</h2>
-        <div class="item">
-            <span class="item-title">International Conference on Advanced Topics in Dynamical Systems</span>
-            <span class="item-details">Nanjing, China (Octubre 2025).</span>
-        </div>
-        <div class="item">
-            <span class="item-title">Joint Meeting RSME-UMA-SMM-SDM</span>
-            <span class="item-details">Mini-curso invitado: <em>Introduction to surface dynamics</em>. Brasil (2024).</span>
-        </div>
-        <div class="item">
-            <span class="item-title">Coloquio de Matemática de la Región Centro</span>
-            <span class="item-details">Charla invitada. Argentina (2024).</span>
-        </div>
+    <section id="teaching">
+        <h2>Teaching & Supervision</h2>
+        <p>I have over 13 years of teaching experience, including 11 at the university level with consistently strong evaluations.</p>
+        
+        <h3>Supervision</h3>
+        <p>Currently co-supervising Master's student: <strong>Lara de Assumpção Maffei Pierobon</strong> (Project: <em>Topological Horseshoes</em>) at USP.</p>
+        
+        <h3>Fellowships</h3>
+        <p>Awarded over 160K USD in graduate and postdoctoral fellowships, including prestigious FAPESP and PEDECIBA awards.</p>
     </section>
 
     <section id="outreach">
-        <h2>Divulgación y Extensión</h2>
-        <p>Comprometido con la comunicación pública de la ciencia:</p>
+        <h2>Mathematical Outreach</h2>
+        <p>I am deeply committed to the public communication of mathematics:</p>
         <ul>
-            <li>Miembro fundador del proyecto <strong>TMU</strong> (Talleres de Matemática de Uruguay), participando en eventos masivos de ciencia durante más de 5 años.</li>
-            <li>Columnista y entrevistado en medios de comunicación (radio y prensa) sobre temas matemáticos.</li>
-            <li>En preparación: Libro de divulgación científica para público general.</li>
+            <li><strong>TMU Project:</strong> Founding member of <em>Talleres de Matemática de Uruguay</em>. Over 5 years of experience conducting workshops and public lectures.</li>
+            <li><strong>Media:</strong> Frequent guest and columnist in radio and press, discussing mathematical concepts for general audiences.</li>
+            <li><strong>Author:</strong> Popular science book in preparation (preliminary stage).</li>
         </ul>
     </section>
 
     <section id="contact">
-        <h2>Contacto</h2>
-        <ul class="contact-list">
-            <li><strong>Email:</strong> <a href="mailto:alejogarciasassi@gmail.com">alejogarciasassi@gmail.com</a></li>
-            <li><strong>Ubicación:</strong> IME-USP, Rua do Matão 1010, São Paulo, Brasil.</li>
-            <li><strong>Institución:</strong> Universidad de la República (UdelaR), Uruguay.</li>
+        <h2>Contact</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li><strong>Email:</strong> <a href="mailto:alejogarciasassi@gmail.com" style="color: var(--accent-color);">alejogarciasassi@gmail.com</a></li>
+            <li><strong>Address (Brazil):</strong> IME-USP, Rua do Matão 1010, São Paulo, SP, Brazil.</li>
+            <li><strong>Address (Uruguay):</strong> IMERL, Facultad de Ingeniería, Julio Herrera y Reissig 565, Montevideo.</li>
         </ul>
     </section>
 
 </div>
 
 <footer>
-    <p>&copy; 2026 Alejo García-Sassi • Generado para GitHub Pages</p>
+    <div class="container">
+        <p>&copy; 2026 Alejo García-Sassi • Last Updated: January 2026</p>
+    </div>
 </footer>
 
 </body>
