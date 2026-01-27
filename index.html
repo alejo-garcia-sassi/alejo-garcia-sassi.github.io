@@ -10,13 +10,13 @@
             --accent-color: #4b0082;  /* Indigo accent */
             --bg-color: #f8f9fa;
             --text-color: #222;
-            --light-text: #666;
+            --light-text: #555;
             --white: #ffffff;
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.7;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
             color: var(--text-color);
             background-color: var(--bg-color);
             margin: 0;
@@ -28,69 +28,74 @@
         header {
             background-color: var(--primary-color);
             color: var(--white);
-            padding: 70px 0;
+            padding: 60px 0;
             text-align: center;
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid rgba(255,255,255,0.1);
-            margin-bottom: 25px;
+            border: 4px solid rgba(255,255,255,0.15);
+            margin-bottom: 20px;
         }
 
-        h1 { margin: 0; font-size: 2.8rem; letter-spacing: -1px; }
-        .subtitle { font-size: 1.2rem; color: #a19db1; font-weight: 300; margin-top: 8px; }
+        h1 { margin: 0; font-size: 2.5rem; font-weight: 700; letter-spacing: -0.5px; }
+        .subtitle { font-size: 1.1rem; color: #a19db1; font-weight: 300; margin-top: 10px; }
 
-        nav { margin-top: 35px; }
-        nav a { color: #a19db1; margin: 0 15px; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.2px; transition: 0.3s; }
+        nav { margin-top: 30px; }
+        nav a { color: #ccc; margin: 0 12px; text-decoration: none; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: color 0.3s; }
         nav a:hover { color: var(--white); }
 
         /* Sections */
         section {
             background: var(--white);
-            padding: 45px;
-            margin: 35px 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            padding: 40px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        h2 { color: var(--primary-color); font-size: 1.6rem; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 25px; }
-        h3 { font-size: 1.15rem; margin-top: 30px; color: var(--accent-color); border-left: 3px solid var(--accent-color); padding-left: 10px; }
+        h2 { color: var(--primary-color); font-size: 1.5rem; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 25px; }
+        h3 { font-size: 1.1rem; margin-top: 30px; color: var(--accent-color); font-weight: 600; }
 
-        /* Items */
+        /* Lists & Items */
+        ul { padding-left: 20px; margin-bottom: 20px; }
+        li { margin-bottom: 8px; }
+
         .item { margin-bottom: 25px; }
-        .item-title { font-weight: 600; display: block; color: #111; font-size: 1.05rem; }
-        .item-details { font-size: 0.95rem; color: var(--light-text); display: block; line-height: 1.5; }
-        .tag { font-size: 0.7rem; background: #f0f0f5; padding: 3px 10px; border-radius: 4px; text-transform: uppercase; color: var(--accent-color); font-weight: bold; margin-right: 8px; }
+        .item-title { font-weight: 700; display: block; color: #000; font-size: 1rem; }
+        .item-details { font-size: 0.95rem; color: var(--light-text); display: block; margin-top: 4px; }
+        .tag { 
+            display: inline-block; font-size: 0.75rem; background: #eef; 
+            padding: 2px 8px; border-radius: 4px; color: var(--accent-color); 
+            font-weight: 600; margin-right: 8px; vertical-align: middle;
+        }
 
+        /* Buttons */
         .btn {
             display: inline-block;
             background: var(--primary-color);
             color: white;
-            padding: 12px 28px;
-            border-radius: 6px;
+            padding: 10px 24px;
+            border-radius: 5px;
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            transition: background 0.3s;
             margin-right: 10px;
-            margin-top: 10px;
+            margin-top: 5px;
         }
-        .btn:hover { background: var(--accent-color); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(75, 0, 130, 0.2); }
-        .btn-secondary { background: #444; }
+        .btn:hover { background: var(--accent-color); }
+        .btn-outline { background: transparent; border: 1px solid var(--primary-color); color: var(--primary-color); }
+        .btn-outline:hover { background: var(--primary-color); color: white; }
 
-        footer { text-align: center; padding: 50px 0; color: #999; font-size: 0.85rem; border-top: 1px solid #eee; }
-
-        /* List styling */
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
+        footer { text-align: center; padding: 40px 0; color: #888; font-size: 0.85rem; }
 
         @media (max-width: 600px) {
             h1 { font-size: 2rem; }
             section { padding: 25px; }
-            nav a { display: inline-block; margin: 5px 10px; }
+            nav a { display: block; margin: 10px 0; }
         }
     </style>
 </head>
@@ -100,7 +105,7 @@
     <div class="container">
         <img src="alejo.jpeg" alt="Alejo García-Sassi" class="profile-img">
         <h1>Alejo García-Sassi</h1>
-        <p class="subtitle">Dynamical Systems • Low-dimensional Geometry & Topology • Ergodic Theory</p>
+        <p class="subtitle">Dynamical Systems • Geometry & Topology • Ergodic Theory</p>
         <nav>
             <a href="#about">About</a>
             <a href="#research">Research</a>
@@ -114,21 +119,16 @@
 <div class="container">
 
     <section id="about">
-        <h2>Summary</h2>
-        <p>I am a mathematician with a broad interest in <strong>Dynamical Systems</strong>, <strong>Geometry</strong>, and <strong>Topology</strong>, as well as their applications to fields such as Astrodynamics and Fluid Mechanics.</p>
+        <h2>About Me</h2>
+        <p>I am a mathematician with broad interests in <strong>Dynamical Systems</strong>, <strong>Low-dimensional Topology</strong>, and <strong>Geometry</strong>, as well as their applications to fields such as Fluid Mechanics and Astrodynamics.</p>
         
-        <p>Currently, I am a <strong>Postdoctoral Researcher (FAPESP)</strong> at the Institute of Mathematics and Statistics, University of São Paulo (IME-USP), and I hold a permanent position as <strong>Junior Professor</strong> at the Instituto de Matemática y Estadística Rafael Laguardia (IMERL), Universidad de la República (UdelaR), Uruguay.</p>
+        <p>Currently, I hold a position as a <strong>Postdoctoral Researcher (FAPESP)</strong> at the Institute of Mathematics and Statistics, University of São Paulo (IME-USP). I am also a <strong>Junior Professor</strong> (on leave) at the Instituto de Matemática y Estadística Rafael Laguardia (IMERL), Universidad de la República (UdelaR).</p>
         
-        <h3>Education</h3>
-        <ul>
-            <li><strong>Joint PhD in Mathematics:</strong> USP (Brazil) and UdelaR (Uruguay), 2024.</li>
-            <li><strong>M.Sc. in Mathematics:</strong> Universidad de la República, Uruguay, 2020.</li>
-            <li><strong>B.Sc. in Mathematics:</strong> Universidad de la República, Uruguay, 2017.</li>
-        </ul>
+        <p>I earned a joint PhD between USP and UdelaR (2024), under the supervision of <strong>Alejandro Passeggi</strong> and <strong>Fábio Armando Tal</strong>. During my doctoral studies, I completed three research stays at Sorbonne Université (IMJ-PRG), working with Pierre-Antoine Guihéneuf.</p>
 
-        <div style="margin-top: 30px;">
-            <a href="Cv_Actualizado.pdf" class="btn" target="_blank">Download Full CV (PDF)</a>
-            <a href="tesis.pdf" class="btn btn-secondary" target="_blank">PhD Thesis</a>
+        <div style="margin-top: 25px;">
+            <a href="Cv_Actualizado.pdf" class="btn" target="_blank">Download CV</a>
+            <a href="tesis.pdf" class="btn btn-outline" target="_blank">PhD Thesis</a>
         </div>
     </section>
 
@@ -141,68 +141,74 @@
             <span class="item-title">Fully chaotic conservative models for some torus homeomorphisms</span>
             <span class="item-details">With Fábio Armando Tal. arXiv: 2404.02341. Under consideration by <em>Memoirs of the AMS</em>.</span>
         </div>
+
         <div class="item">
             <span class="tag">Preprint</span>
             <span class="item-title">Geodesic tracking and the shape of ergodic rotation sets</span>
             <span class="item-details">With Pablo Lessa and Pierre-Antoine Guihéneuf. Under consideration by <em>ASENS</em>.</span>
         </div>
+
         <div class="item">
             <span class="tag">Published</span>
             <span class="item-title">Fixed points for branched covering maps of the plane</span>
             <span class="item-details"><em>Fundamenta Mathematicae</em>, 254:213–236, 2021.</span>
         </div>
 
-        <h3>Selected Invited Talks</h3>
-        <ul>
-            <li><strong>International Conference on Advanced Topics in Dynamical Systems</strong>, Nanjing, China (2025).</li>
-            <li><strong>Joint Meeting RSME-UMA-SMM-SDM</strong>, Mini-course: <em>Introduction to surface dynamics</em>, Brazil (2024).</li>
-            <li><strong>Coloquio de Matemática de la Región Centro</strong>, Invited Talk, Argentina (2024).</li>
-        </ul>
-
         <h3>Ongoing Projects</h3>
         <ul>
-            <li>Explicit uniform bounds for elliptic islands.</li>
-            <li>Fully chaotic models for higher genus surfaces.</li>
-            <li>Maximal entropy measures for C∞ fully rotational homeomorphisms.</li>
+            <li><strong>Explicit uniform bounds for elliptic islands.</strong></li>
+            <li><strong>Fully chaotic models for higher genus surfaces:</strong> With Fábio Armando Tal. Generalizing previous results to hyperbolic closed surfaces.</li>
+            <li><strong>Maximal entropy measures for C∞ fully rotational homeomorphisms:</strong> With Fábio Armando Tal.</li>
+            <li><strong>Annular chaos:</strong> With Alejandro Passeggi, Favio Pirán, and Fábio Armando Tal.</li>
+            <li><strong>Quotient relations:</strong> Investigating relations between fully chaotic quotients and semiconjugacy quotients (with André de Carvalho).</li>
         </ul>
+    </section>
+
+    <section id="talks">
+        <h2>Selected Talks</h2>
+        <div class="item">
+            <span class="item-title">International Conference on Advanced Topics in Dynamical Systems</span>
+            <span class="item-details">Tianjin, China (October 2025).</span>
+        </div>
+        <div class="item">
+            <span class="item-title">Joint Meeting RSME-UMA-SMM-SDM</span>
+            <span class="item-details">Mini-course: <em>Introduction to surface dynamics</em>. Brazil (2024).</span>
+        </div>
+        <div class="item">
+            <span class="item-title">Coloquio de Matemática de la Región Centro</span>
+            <span class="item-details">Invited Talk. Argentina (2024).</span>
+        </div>
     </section>
 
     <section id="teaching">
-        <h2>Teaching & Supervision</h2>
-        <p>I have over 13 years of teaching experience, including 11 at the university level with consistently strong evaluations.</p>
+        <h2>Teaching & Outreach</h2>
         
-        <h3>Supervision</h3>
-        <p>Currently co-supervising Master's student: <strong>Lara de Assumpção Maffei Pierobon</strong> (Project: <em>Topological Horseshoes</em>) at USP.</p>
-        
-        <h3>Fellowships</h3>
-        <p>Awarded over 160K USD in graduate and postdoctoral fellowships, including prestigious FAPESP and PEDECIBA awards.</p>
-    </section>
+        <h3>Students</h3>
+        <p><strong>Lara de Assumpção Maffei Pierobon</strong> (Master's Student at USP).<br>
+        <em>Project:</em> Topological horseshoes (Co-supervised with F. A. Tal).</p>
 
-    <section id="outreach">
-        <h2>Mathematical Outreach</h2>
-        <p>I am deeply committed to the public communication of mathematics:</p>
+        <h3>Outreach (Divulgación)</h3>
+        <p>I am deeply committed to communicating mathematics to the public:</p>
         <ul>
-            <li><strong>TMU Project:</strong> Founding member of <em>Talleres de Matemática de Uruguay</em>. Over 5 years of experience conducting workshops and public lectures.</li>
-            <li><strong>Media:</strong> Frequent guest and columnist in radio and press, discussing mathematical concepts for general audiences.</li>
-            <li><strong>Author:</strong> Popular science book in preparation (preliminary stage).</li>
+            <li><strong>TMU (Talleres de Matemática de Uruguay):</strong> Founding member. Over 5 years of experience organizing workshops and science events.</li>
+            <li><strong>Media:</strong> Columnist and interviewee in radio and press.</li>
+            <li><strong>Book:</strong> Currently working on a popular science book (in preparation).</li>
         </ul>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
         <ul style="list-style: none; padding: 0;">
-            <li><strong>Email:</strong> <a href="mailto:alejogarciasassi@gmail.com" style="color: var(--accent-color);">alejogarciasassi@gmail.com</a></li>
-            <li><strong>Address (Brazil):</strong> IME-USP, Rua do Matão 1010, São Paulo, SP, Brazil.</li>
-            <li><strong>Address (Uruguay):</strong> IMERL, Facultad de Ingeniería, Julio Herrera y Reissig 565, Montevideo.</li>
+            <li class="item-details"><strong>Email:</strong> <a href="mailto:alejogarciasassi@gmail.com" style="color: var(--accent-color);">alejogarciasassi@gmail.com</a></li>
+            <li class="item-details"><strong>Brazil:</strong> IME-USP, Rua do Matão 1010, São Paulo.</li>
+            <li class="item-details"><strong>Uruguay:</strong> IMERL, Facultad de Ingeniería, Montevideo.</li>
         </ul>
     </section>
 
 </div>
 
 <footer>
-    <div class="container">
-        <p>&copy; 2026 Alejo García-Sassi • Last Updated: January 2026</p>
-    </div>
+    <p>&copy; 2026 Alejo García-Sassi. Last updated: January 2026.</p>
 </footer>
 
 </body>
