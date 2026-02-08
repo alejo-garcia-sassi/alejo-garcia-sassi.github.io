@@ -28,6 +28,20 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Ensure content links match the arXiv accent styling */
+.item a,
+.item-title a,
+.item-details a {
+    color: var(--accent-color) !important;
+    text-decoration: none;
+}
+
+.item a:hover,
+.item-title a:hover,
+.item-details a:hover {
+    text-decoration: underline;
+}
+
 .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
 
 /* Header */
